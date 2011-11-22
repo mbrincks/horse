@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Show Connection</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">The Show Connection</a>
+
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Shows</a></li>
+            <li><a href="#contact">Riders</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+{% block main %}
+        <h1>Welcome!</h1>
+        <p>The most recent show should go here?</p>
+        <p><a class="btn primary large">More &raquo;</a></p>
+{% endblock %}
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span6">
+          <h2>About The Show Connection</h2>
+          <p>Filler spot for about information.</p>
+          <p><a class="btn" href="#">More? Will this link to anywhere? &raquo;</a></p>
+
+        </div>
+        <div class="span5">
+          <h2>Shows</h2>
+           <p>Blah blah blah... check out the latest information about shows in Region 8 of the IHSA. </p>
+          <p><a class="btn" href="#">More &raquo;</a></p>
+       </div>
+        <div class="span5">
+
+          <h2>Riders</h2>
+          <p>Blah blah blah... find out what your favorite riders have been up to this season.</p>
+          <p><a class="btn" href="#">More &raquo;</a></p>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; mbrincks 2011</p>
+
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
+

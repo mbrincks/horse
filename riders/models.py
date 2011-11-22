@@ -1,9 +1,11 @@
 from django.db import models
-from events.models import School
+from schools.models import School, Season
 
 class Level(models.Model):
     level = models.CharField(max_length=150)
     level_slug =  models.SlugField()
+    def get_absolute_url(self):
+        return "/levels/%s/" %self.slug
     def __unicode__(self):
         return self.level    
 
@@ -23,20 +25,23 @@ class Rider(models.Model):
     name = models.CharField(max_length=200)
     name_slug = models.SlugField()
     hometown = models.CharField(max_length=200)
+    def get_absolute_url(self):
+        return "/rider/%i/" % self.id
     def __unicode__(self):
-        return self.rider
+        return self.name
 
-class Season(models.Model):
-    school = models.ForeignKey(School)
+class RiderSeason(models.Model):
     rider = models.ForeignKey(Rider)
+    season = models.ForeignKey(Season)
+    school = models.ForeignKey(School)
     year = models.ForeignKey(Year)
     level = models.ManyToManyField(Level)
     points = models.IntegerField()
     def __unicode__(self):
-        return self.season
+        return "%s: %s" % (self.rider.name, self.season.season_name)
 
 class Photo(models.Model):
-    image = models.ImageField(upload_to='photo')
+    photo = models.ImageField(upload_to='photo')
     caption = models.TextField(blank=True, null=True)
     riders_in_photo = models.ManyToManyField(Season, blank=True, null=True)
     def __unicode__(self):

@@ -69,9 +69,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    "/home/megan/horse/static/",
 )
 
 # List of finder classes that know how to find static files in
@@ -103,6 +101,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'horse.urls'
 
 TEMPLATE_DIRS = (
+    '/home/megan/horse/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -118,6 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'riders',
     'events',
+    'schools',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
