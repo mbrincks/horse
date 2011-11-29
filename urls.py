@@ -8,7 +8,11 @@ urlpatterns = patterns('',
     (r'^event/(?P<event_id>\d+)/$', 'events.views.detail'),
 
     (r'^riders/$', 'horse.riders.views.rider_list'),
-    (r'^riders/(?P<event_id>\d+)/$', 'horse.riders.views.detail'),
+    (r'^riders/(?P<rider_id>\d+)/$', 'horse.riders.views.detail'),
+
+    (r'^schools/$', 'horse.schools.views.school_list'),
+    (r'^schools/(?P<school_id>\d+)/$', 'horse.schools.views.detail'),
+
     # url(r'^horse/', include('horse.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

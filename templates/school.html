@@ -1,0 +1,9 @@
+{%extends "base.html"%}
+
+{% block main %}
+
+{% for school in schools%}
+    <a href="{{ school.get_absolute_url}}">{{ school }}</a>
+{%endfor%}
+
+{%endblock%}

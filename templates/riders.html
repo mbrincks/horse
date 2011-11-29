@@ -1,1 +1,9 @@
-11.15.11: This is where a list of riders will hopefully go someday to live.
+{%extends "base.html"%}
+
+{% block main %}
+
+{% for rider in riders%}
+    <a href="{{ rider.get_absolute_url}}">{{ rider }}</a>
+{%endfor%}
+
+{%endblock%}
