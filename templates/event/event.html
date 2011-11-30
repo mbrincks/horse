@@ -3,7 +3,9 @@
 {% block main %}
 
 {% for event in events%}
+<ul>
     <a href="{{ event.get_absolute_url}}">{{ event }}</a>
+</ul>
 {%endfor%}
 
 {%endblock%}

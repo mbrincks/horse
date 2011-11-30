@@ -11,6 +11,6 @@ class School(models.Model):
     school_slug = models.SlugField()
     school_abbreviation = models.CharField(max_length=10)
     def get_absolute_url(self):
-        return "/schools/%s/" % self.slug
+        return "/schools/%i/" % self.id
     def __unicode__(self):
         return self.school

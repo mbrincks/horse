@@ -1,0 +1,11 @@
+{%extends "base.html"%}
+
+{% block main %}
+
+{% for rider in rider%}
+<ul>
+    <a href="{{ rider.get_absolute_url}}">{{ rider.name }}</a>
+</ul>
+{%endfor%}
+
+{%endblock%}

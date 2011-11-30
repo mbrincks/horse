@@ -7,8 +7,8 @@ def homepage(request):
 
 def event_list(request):
     events = Event.objects.order_by('-date')
-    return render_to_response('event.html', {'events': events,})
+    return render_to_response('event/event.html', {'events': events,})
 
 def detail(request, event_id):
     event = Event.objects.get(id=event_id)
-    return render_to_response('detail.html', {'event':event})
+    return render_to_response('event/detail.html', {'event': event})

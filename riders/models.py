@@ -26,9 +26,9 @@ class Rider(models.Model):
     name_slug = models.SlugField()
     hometown = models.CharField(max_length=200)
     def get_absolute_url(self):
-        return "/rider/%i/" % self.id
+        return "/riders/%i/" % self.id
     def __unicode__(self):
-        return self.name
+        return self.name_slug
 
 class RiderSeason(models.Model):
     rider = models.ForeignKey(Rider)

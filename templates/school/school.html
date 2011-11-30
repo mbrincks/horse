@@ -3,7 +3,9 @@
 {% block main %}
 
 {% for school in schools%}
+<ul>
     <a href="{{ school.get_absolute_url}}">{{ school }}</a>
+</ul>
 {%endfor%}
 
 {%endblock%}
