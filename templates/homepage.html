@@ -1,12 +1,14 @@
 {%extends "base.html"%}
 
 {% block main %}
+<h2> Recent Shows </h2>
+<hr />
 
 {% for event in events%}
 <ul>
     <a href="{{ event.get_absolute_url}}">{{ event }}</a>
 </ul>
 {%endfor%}
-<p><a href="/event/" class="btn primary large">More &raquo;</a></p>
+<p><a href="/event/" class="btn primary large">More Shows &raquo;</a></p>
 
 {%endblock%}

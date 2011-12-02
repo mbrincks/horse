@@ -2,6 +2,11 @@
 
 {% block main %}
 
-
+<h2>{{ school }}</h2>
+<hr />
+<strong>Riders: </strong>
+<ul>{% for rider in school.riderseason_set.all %}
+<li><a href="{{ rider.rider.get_absolute_url }}">{{ rider.rider.name }}</li>
+{% endfor %}
 
 {%endblock%}

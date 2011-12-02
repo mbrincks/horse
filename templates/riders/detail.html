@@ -2,8 +2,20 @@
 
 {% block main %}
 
-<ul>
-    <a href="{{ rider.get_absolute_url}}">{{ rider.name }}</a>
-</ul>
+<h2>{{ rider.name }}</h2>
+<strong>{{ rider.hometown }}</strong>
+
+{% for season in rider.riderseason_set.all %}
+<em>{{ season.school }}</em>
+{% endfor %}
+
+{% for season in rider.riderseason_set.all %}
+<p>{{ season.year }} </p>
+{% endfor %}
+
+<p>Riding Level: </p>
+<ul>{% for season in rider.riderseason_set.all %}{% for level in season.level.all %}
+<li>{{ level.level }}</a></li>
+{% endfor %}{% endfor %}</ul>
 
 {%endblock%}

@@ -1,7 +1,9 @@
 {%extends "base.html"%}
 
 {% block main %}
-
+<h2> All Competitors </h2>
+<h5> Click on each name for more information. </h5>
+<hr />
 {% for rider in rider%}
 <ul>
     <a href="{{ rider.get_absolute_url}}">{{ rider.name }}</a>

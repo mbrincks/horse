@@ -3,9 +3,25 @@
 {% block main %}
 
 
-<h1>{{ event }}</h1>
+<h2>{{ event }}</h2>
 <strong>{{ event.date }}</strong>
 {{ event.location }}
 
+<p>High Point Team: <a href="{{ event.high_point_team.get_absolute_url }}">{{ event.high_point_team.school }}</a></p>
 
+<p>Reserve High Point Team: <a href="{{ event.reserve_team.get_absolute_url }}">{{ event.reserve_team.school }}</a></p>
+
+<p>High Point Rider: <a href="{{ event.high_point_rider.rider.get_absolute_url }}">{{ event.high_point_rider }}</a></p>
+
+<p>Reserve High Point Rider: <a href="{{ event.reserve_rider.rider.get_absolute_url }}">{{ event.reserve_rider }}</a></p>
+
+<p>Participating Teams:</p>
+<ul>{% for team in event.participating_teams.all %}
+<li><a href="{{ team.get_absolute_url }}">{{ team.school }}</a></li>
+{% endfor %}</ul>
+
+<p>Participating Riders:</p>
+<ul>{% for rider in event.participating_riders.all %}
+<li><a href="{{ rider.rider.get_absolute_url }}">{{ rider.rider.name }}</a></li>
+{% endfor %}</ul>
 {%endblock%}
