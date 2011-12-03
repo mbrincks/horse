@@ -3,15 +3,23 @@
 {% block main %}
 
 <h2>{{ rider.name }}</h2>
+
 <strong>{{ rider.hometown }}</strong>
 
 {% for season in rider.riderseason_set.all %}
 <em>{{ season.school }}</em>
 {% endfor %}
+<hr />
 
+<p>Points: 
 {% for season in rider.riderseason_set.all %}
-<p>{{ season.year }} </p>
-{% endfor %}
+{{ season.points }}
+{% endfor %}</p>
+
+<p>Year: 
+{% for season in rider.riderseason_set.all %}
+<em>{{ season.year }}</em>
+{% endfor %}</p> 
 
 <p>Riding Level: </p>
 <ul>{% for season in rider.riderseason_set.all %}{% for level in season.level.all %}
